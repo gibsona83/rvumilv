@@ -9,7 +9,7 @@ st.set_page_config(page_title='Searchable RVU Database', layout='wide')
 def load_data(url):
     response = requests.get(url)
     if response.status_code == 200:
-        data = pd.read_excel(io.BytesIO(response.content), sheet_name='wRVU')
+        data = pd.read_csv(io.StringIO(response.content.decode('utf-8')))
         data = data.drop(columns=['MOD'], errors='ignore')
         return data
     else:
@@ -18,7 +18,7 @@ def load_data(url):
 
 st.title('Searchable Diagnostic Radiology wRVUs Database')
 
-url = 'https://raw.githubusercontent.com/gibsona83/rvumilv/main/Diagnostic_Radiology_wRVUs_PY2025.xlsx'
+url = 'https://raw.githubusercontent.com/gibsona83/rvumilv/main/Diagnostic_Radiology_wRVUs_PY2025.csv'
 
 try:
     data = load_data(url)
