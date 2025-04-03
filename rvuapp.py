@@ -16,13 +16,11 @@ def load_data(url):
         st.error('Error loading file from GitHub')
         st.stop()
 
-# Display the MILV logo and title
-title_col1, title_col2 = st.columns([1, 5])
-with title_col1:
-    st.image('/mnt/data/milv.png', width=100)
-with title_col2:
-    st.markdown("# Medical Imaging of Lehigh Valley, P.C.")
-    st.markdown("### Searchable Diagnostic Radiology wRVUs Database")
+# Display the MILV logo from GitHub
+logo_url = 'https://raw.githubusercontent.com/gibsona83/rvumilv/main/milv.png'
+st.image(logo_url, width=200)
+st.markdown("# Medical Imaging of Lehigh Valley, P.C.")
+st.markdown("### Searchable Diagnostic Radiology wRVUs Database")
 
 url = 'https://raw.githubusercontent.com/gibsona83/rvumilv/main/Diagnostic_Radiology_wRVUs_PY2025.csv'
 
