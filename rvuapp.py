@@ -3,106 +3,102 @@ import pandas as pd
 import requests
 from io import StringIO
 
-# Configure page settings
+# Configure page settings for compact layout
 st.set_page_config(
-    page_title='Searchable RVU Database',
-    layout='wide',
-    page_icon='⚕️'  # Added medical emoji as page icon
+    page_title='RVU Database',
+    layout='centered',
+    page_icon='⚕️'
 )
 
-@st.cache_data(ttl=3600)  # Cache data for 1 hour
+@st.cache_data(ttl=3600)
 def load_data(url):
     try:
         response = requests.get(url, timeout=10)
         response.raise_for_status()
         data = pd.read_csv(
             StringIO(response.content.decode('utf-8')),
-            dtype={'CPT': str, 'DESCRIPTION': str}  # Specify column types
+            dtype={'CPT': str, 'DESCRIPTION': str}
         )
         return data.drop(columns=['MOD'], errors='ignore')
-    except requests.exceptions.RequestException as e:
-        st.error(f'Network error: {str(e)}')
-        st.stop()
     except Exception as e:
-        st.error(f'Data processing error: {str(e)}')
+        st.error(f'Error loading data: {str(e)}')
         st.stop()
 
-# Centered header with styled components
-header_col1, header_col2, header_col3 = st.columns([1, 3, 1])
-with header_col2:
+# Compact header layout
+col1, col2 = st.columns([1, 3])
+with col1:
     st.image(
         'https://raw.githubusercontent.com/gibsona83/rvumilv/main/milv.png',
-        width=250
+        width=150
     )
-    st.markdown(
-        "<h1 style='text-align: center; margin-bottom: 0;'>Medical Imaging of Lehigh Valley, P.C.</h1>"
-        "<h2 style='text-align: center; margin-top: 0;'>Searchable Diagnostic Radiology wRVUs Database</h2>",
-        unsafe_allow_html=True
-    )
+with col2:
+    st.markdown("""
+        <h1 style='margin-bottom:0;'>Medical Imaging of Lehigh Valley</h1>
+        <h3 style='margin-top:0;'>Diagnostic Radiology wRVUs Database</h3>
+    """, unsafe_allow_html=True)
 
-# Load data with error handling
+# Load data without success message
 DATA_URL = 'https://raw.githubusercontent.com/gibsona83/rvumilv/main/Diagnostic_Radiology_wRVUs_PY2025.csv'
 data = load_data(DATA_URL)
-st.success('📊 Data loaded successfully!')
 
-# Search interface
-with st.expander("🔍 Search for Diagnostic Radiology wRVUs", expanded=True):
-    search_term = st.text_input(
-        'Enter CPT code or description:',
-        help='Search supports partial matches (e.g., "732" or "MRI")'
-    )
+# Compact search interface
+st.markdown("---")
+search_term = st.text_input(
+    '🔍 Search by CPT code or description:',
+    help='Example: 732 or MRI'
+)
 
-# Search functionality
+# Search results section
 if search_term:
-    # Create filtered dataset
     mask = (
         data['CPT'].str.contains(search_term, case=False, regex=False) |
         data['DESCRIPTION'].str.contains(search_term, case=False, regex=False)
     )
     filtered_data = data[mask]
     
-    # Display results
-    st.subheader(f'Results for "{search_term}"')
-    st.dataframe(
-        filtered_data,
-        use_container_width=True,
-        height=400,
-        column_config={
-            "CPT": "CPT Code",
-            "DESCRIPTION": "Procedure Description",
-            "wRVU": st.column_config.NumberColumn("wRVU", format="%.2f ⚕")
-        }
-    )
-    
-    # Results summary and download
-    st.metric("Total Results", len(filtered_data))
-    st.download_button(
-        label='📥 Download Filtered Results',
-        data=filtered_data.to_csv(index=False),
-        file_name='filtered_rvu_data.csv',
-        mime='text/csv',
-        use_container_width=True
-    )
+    if not filtered_data.empty:
+        # Compact results display
+        col_a, col_b = st.columns([3, 1])
+        with col_a:
+            st.subheader(f'Results: {len(filtered_data)} entries')
+        with col_b:
+            st.download_button(
+                '📥 Download',
+                filtered_data.to_csv(index=False),
+                file_name='rvu_results.csv',
+                use_container_width=True
+            )
+        
+        st.dataframe(
+            filtered_data,
+            use_container_width=True,
+            height=300,
+            column_config={
+                "CPT": "CPT Code",
+                "DESCRIPTION": "Description",
+                "wRVU": st.column_config.NumberColumn("wRVU", format="%.2f")
+            }
+        )
+    else:
+        st.warning('No matching entries found')
 
-# Data preview section
-with st.expander("📋 Full Dataset Preview", expanded=True):
+# Collapsible full data preview
+with st.expander("⚠️ Show Full Dataset (Caution: Large Dataset)"):
     st.dataframe(
         data,
         use_container_width=True,
-        height=400,
+        height=300,
         hide_index=True,
         column_config={
             "CPT": "CPT Code",
-            "DESCRIPTION": "Procedure Description",
-            "wRVU": st.column_config.NumberColumn("wRVU", format="%.2f ⚕")
+            "DESCRIPTION": "Description",
+            "wRVU": st.column_config.NumberColumn("wRVU", format="%.2f")
         }
     )
 
-# Add footer
-st.markdown("---")
-st.markdown(
-    "<div style='text-align: center; color: #666;'>"
-    "Powered by Streamlit ⚡ | Medical Coding Reference System"
-    "</div>",
-    unsafe_allow_html=True
-)
+# Minimal footer
+st.markdown("""
+    <div style='text-align: center; color: #666; font-size:0.8em; margin-top:1rem;'>
+    LV Radiology Reference System • Powered by Streamlit
+    </div>
+""", unsafe_allow_html=True)
