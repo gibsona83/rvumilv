@@ -18,9 +18,9 @@ def load_data(url):
 
 # Display the MILV logo from GitHub
 logo_url = 'https://raw.githubusercontent.com/gibsona83/rvumilv/main/milv.png'
-st.image(logo_url, width=200)
-st.markdown("# Medical Imaging of Lehigh Valley, P.C.")
-st.markdown("### Searchable Diagnostic Radiology wRVUs Database")
+st.image(logo_url, width=250)
+st.markdown("# Medical Imaging of Lehigh Valley, P.C.", unsafe_allow_html=True)
+st.markdown("## Searchable Diagnostic Radiology wRVUs Database", unsafe_allow_html=True)
 
 url = 'https://raw.githubusercontent.com/gibsona83/rvumilv/main/Diagnostic_Radiology_wRVUs_PY2025.csv'
 
@@ -29,17 +29,17 @@ try:
     st.success('Data loaded successfully')
 
     st.markdown("---")
-    st.markdown("## Search for Diagnostic Radiology wRVUs")
-    search_col = st.selectbox('Select column to search', ['CPT', 'DESCRIPTION'])
-    search_term = st.text_input('Enter search term')
+    st.markdown("### Search for Diagnostic Radiology wRVUs")
+    search_term = st.text_input('Enter CPT code or description to search')
 
     if search_term:
-        filtered_data = data[data[search_col].astype(str).str.contains(search_term, case=False, na=False)]
-        st.write(f'### Results for search term "{search_term}" in column "{search_col}"')
+        filtered_data = data[data['CPT'].astype(str).str.contains(search_term, case=False, na=False) |
+                             data['DESCRIPTION'].astype(str).str.contains(search_term, case=False, na=False)]
+        st.write(f'### Results for search term "{search_term}"')
         st.dataframe(filtered_data)
         st.write(f'Total results: {len(filtered_data)}')
     else:
-        st.write('Enter a search term to filter the data')
+        st.write('Enter a CPT code or description to filter the data')
 
     st.markdown("---")
     st.markdown("### Data Preview")
