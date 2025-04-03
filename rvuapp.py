@@ -27,12 +27,10 @@ url = 'https://raw.githubusercontent.com/gibsona83/rvumilv/main/Diagnostic_Radio
 try:
     data = load_data(url)
     st.success('Data loaded successfully')
-    st.write('### Data Preview')
-    st.dataframe(data.head())
 
     st.markdown("---")
     st.markdown("## Search for Diagnostic Radiology wRVUs")
-    search_col = st.selectbox('Select column to search', ['CPT', 'DESCRIPTION', 'wRVU'])
+    search_col = st.selectbox('Select column to search', ['CPT', 'DESCRIPTION'])
     search_term = st.text_input('Enter search term')
 
     if search_term:
@@ -42,6 +40,10 @@ try:
         st.write(f'Total results: {len(filtered_data)}')
     else:
         st.write('Enter a search term to filter the data')
+
+    st.markdown("---")
+    st.markdown("### Data Preview")
+    st.dataframe(data.head())
 
     st.markdown("---")
     st.markdown("## Download Filtered Data")
