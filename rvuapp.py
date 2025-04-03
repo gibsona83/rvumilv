@@ -1,54 +1,108 @@
 import streamlit as st
 import pandas as pd
-import io
 import requests
+from io import StringIO
 
-st.set_page_config(page_title='Searchable RVU Database', layout='wide')
+# Configure page settings
+st.set_page_config(
+    page_title='Searchable RVU Database',
+    layout='wide',
+    page_icon='⚕️'  # Added medical emoji as page icon
+)
 
-@st.cache_data
+@st.cache_data(ttl=3600)  # Cache data for 1 hour
 def load_data(url):
-    response = requests.get(url)
-    if response.status_code == 200:
-        data = pd.read_csv(io.StringIO(response.content.decode('utf-8')))
-        data = data.drop(columns=['MOD'], errors='ignore')
-        return data
-    else:
-        st.error('Error loading file from GitHub')
+    try:
+        response = requests.get(url, timeout=10)
+        response.raise_for_status()
+        data = pd.read_csv(
+            StringIO(response.content.decode('utf-8')),
+            dtype={'CPT': str, 'DESCRIPTION': str}  # Specify column types
+        )
+        return data.drop(columns=['MOD'], errors='ignore')
+    except requests.exceptions.RequestException as e:
+        st.error(f'Network error: {str(e)}')
+        st.stop()
+    except Exception as e:
+        st.error(f'Data processing error: {str(e)}')
         st.stop()
 
-# Display the MILV logo from GitHub
-logo_url = 'https://raw.githubusercontent.com/gibsona83/rvumilv/main/milv.png'
-st.image(logo_url, width=250)
-st.markdown("# Medical Imaging of Lehigh Valley, P.C.", unsafe_allow_html=True)
-st.markdown("## Searchable Diagnostic Radiology wRVUs Database", unsafe_allow_html=True)
+# Centered header with styled components
+header_col1, header_col2, header_col3 = st.columns([1, 3, 1])
+with header_col2:
+    st.image(
+        'https://raw.githubusercontent.com/gibsona83/rvumilv/main/milv.png',
+        width=250
+    )
+    st.markdown(
+        "<h1 style='text-align: center; margin-bottom: 0;'>Medical Imaging of Lehigh Valley, P.C.</h1>"
+        "<h2 style='text-align: center; margin-top: 0;'>Searchable Diagnostic Radiology wRVUs Database</h2>",
+        unsafe_allow_html=True
+    )
 
-url = 'https://raw.githubusercontent.com/gibsona83/rvumilv/main/Diagnostic_Radiology_wRVUs_PY2025.csv'
+# Load data with error handling
+DATA_URL = 'https://raw.githubusercontent.com/gibsona83/rvumilv/main/Diagnostic_Radiology_wRVUs_PY2025.csv'
+data = load_data(DATA_URL)
+st.success('📊 Data loaded successfully!')
 
-try:
-    data = load_data(url)
-    st.success('Data loaded successfully')
+# Search interface
+with st.expander("🔍 Search for Diagnostic Radiology wRVUs", expanded=True):
+    search_term = st.text_input(
+        'Enter CPT code or description:',
+        help='Search supports partial matches (e.g., "732" or "MRI")'
+    )
 
-    st.markdown("---")
-    st.markdown("### Search for Diagnostic Radiology wRVUs")
-    search_term = st.text_input('Enter CPT code or description to search')
+# Search functionality
+if search_term:
+    # Create filtered dataset
+    mask = (
+        data['CPT'].str.contains(search_term, case=False, regex=False) |
+        data['DESCRIPTION'].str.contains(search_term, case=False, regex=False)
+    )
+    filtered_data = data[mask]
+    
+    # Display results
+    st.subheader(f'Results for "{search_term}"')
+    st.dataframe(
+        filtered_data,
+        use_container_width=True,
+        height=400,
+        column_config={
+            "CPT": "CPT Code",
+            "DESCRIPTION": "Procedure Description",
+            "wRVU": st.column_config.NumberColumn("wRVU", format="%.2f ⚕")
+        }
+    )
+    
+    # Results summary and download
+    st.metric("Total Results", len(filtered_data))
+    st.download_button(
+        label='📥 Download Filtered Results',
+        data=filtered_data.to_csv(index=False),
+        file_name='filtered_rvu_data.csv',
+        mime='text/csv',
+        use_container_width=True
+    )
 
-    if search_term:
-        filtered_data = data[data['CPT'].astype(str).str.contains(search_term, case=False, na=False) |
-                             data['DESCRIPTION'].astype(str).str.contains(search_term, case=False, na=False)]
-        st.write(f'### Results for search term "{search_term}"')
-        st.dataframe(filtered_data)
-        st.write(f'Total results: {len(filtered_data)}')
-    else:
-        st.write('Enter a CPT code or description to filter the data')
+# Data preview section
+with st.expander("📋 Full Dataset Preview", expanded=True):
+    st.dataframe(
+        data,
+        use_container_width=True,
+        height=400,
+        hide_index=True,
+        column_config={
+            "CPT": "CPT Code",
+            "DESCRIPTION": "Procedure Description",
+            "wRVU": st.column_config.NumberColumn("wRVU", format="%.2f ⚕")
+        }
+    )
 
-    st.markdown("---")
-    st.markdown("### Data Preview")
-    st.dataframe(data.head())
-
-    st.markdown("---")
-    st.markdown("## Download Filtered Data")
-    if st.button('Download as CSV'):
-        csv = filtered_data.to_csv(index=False)
-        st.download_button('Download CSV', csv, 'filtered_data.csv')
-except Exception as e:
-    st.error(f'Error loading data: {e}')
+# Add footer
+st.markdown("---")
+st.markdown(
+    "<div style='text-align: center; color: #666;'>"
+    "Powered by Streamlit ⚡ | Medical Coding Reference System"
+    "</div>",
+    unsafe_allow_html=True
+)
