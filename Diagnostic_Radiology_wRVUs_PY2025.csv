@@ -1,0 +1,621 @@
+﻿CPT,DESCRIPTION,wRVU
+70015,Contrast x-ray of brain,1.19
+70030,X-ray eye for foreign body,0.18
+70100,X-ray exam of jaw <4views,0.18
+70110,X-ray exam of jaw 4/> views,0.25
+70120,X-ray exam of mastoids,0.18
+70130,X-ray exam of mastoids,0.34
+70134,X-ray exam of middle ear,0.34
+70140,X-ray exam of facial bones,0.19
+70150,X-ray exam of facial bones,0.26
+70160,X-ray exam of nasal bones,0.17
+70170,X-ray exam of tear duct,0.30
+70190,X-ray exam of eye sockets,0.21
+70200,X-ray exam of eye sockets,0.28
+70210,X-ray exam of sinuses,0.17
+70220,X-ray exam of sinuses,0.22
+70240,X-ray exam pituitary saddle,0.19
+70250,X-ray exam of skull,0.18
+70260,X-ray exam of skull,0.28
+70300,X-ray exam of teeth,0.10
+70310,X-ray exam of teeth,0.16
+70320,Full mouth x-ray of teeth,0.22
+70328,X-ray exam of jaw joint,0.18
+70330,X-ray exam of jaw joints,0.24
+70332,X-ray exam of jaw joint,0.54
+70336,Magnetic image jaw joint,1.48
+70350,X-ray head for orthodontia,0.17
+70355,Panoramic x-ray of jaws,0.20
+70360,X-ray exam of neck,0.18
+70370,Throat x-ray & fluoroscopy,0.32
+70371,Speech evaluation complex,0.84
+70380,X-ray exam of salivary gland,0.17
+70390,X-ray exam of salivary duct,0.38
+70450,Ct head/brain w/o dye,0.85
+70460,Ct head/brain w/dye,1.13
+70470,Ct head/brain w/o & w/dye,1.27
+70480,Ct orbit/ear/fossa w/o dye,1.28
+70481,Ct orbit/ear/fossa w/dye,1.13
+70482,Ct orbit/ear/fossa w/o&w/dye,1.27
+70486,Ct maxillofacial w/o dye,0.85
+70487,Ct maxillofacial w/dye,1.13
+70488,Ct maxillofacial w/o & w/dye,1.27
+70490,Ct soft tissue neck w/o dye,1.28
+70491,Ct soft tissue neck w/dye,1.38
+70492,Ct sft tsue nck w/o & w/dye,1.62
+70496,Ct angiography head,1.75
+70498,Ct angiography neck,1.75
+70540,Mri orbit/face/neck w/o dye,1.35
+70542,Mri orbit/face/neck w/dye,1.62
+70543,Mri orbt/fac/nck w/o &w/dye,2.15
+70544,Mr angiography head w/o dye,1.20
+70545,Mr angiography head w/dye,1.20
+70546,Mr angiograph head w/o&w/dye,1.48
+70547,Mr angiography neck w/o dye,1.20
+70548,Mr angiography neck w/dye,1.50
+70549,Mr angiograph neck w/o&w/dye,1.80
+70551,Mri brain stem w/o dye,1.48
+70552,Mri brain stem w/dye,1.78
+70553,Mri brain stem w/o & w/dye,2.29
+70554,Fmri brain by tech,2.11
+70555,Fmri brain by phys/psych,2.54
+70557,Mri brain w/o dye,2.90
+70558,Mri brain w/dye,3.20
+70559,Mri brain w/o & w/dye,3.20
+71045,X-ray exam chest 1 view,0.18
+71046,X-ray exam chest 2 views,0.22
+71047,X-ray exam chest 3 views,0.27
+71048,X-ray exam chest 4+ views,0.31
+71100,X-ray exam ribs uni 2 views,0.22
+71101,X-ray exam unilat ribs/chest,0.27
+71110,X-ray exam ribs bil 3 views,0.29
+71111,X-ray exam ribs/chest4/> vws,0.32
+71120,X-ray exam breastbone 2/>vws,0.20
+71130,X-ray strenoclavic jt 3/>vws,0.22
+71250,Ct thorax dx c-,1.08
+71260,Ct thorax dx c+,1.16
+71270,Ct thorax dx c-/c+,1.25
+71271,Ct thorax lung cancer scr c-,1.08
+71275,Ct angiography chest,1.82
+71550,Mri chest w/o dye,1.46
+71551,Mri chest w/dye,1.73
+71552,Mri chest w/o & w/dye,2.26
+71555,Mri angio chest w or w/o dye,1.81
+72020,X-ray exam of spine 1 view,0.16
+72040,X-ray exam neck spine 2-3 vw,0.22
+72050,X-ray exam neck spine 4/5vws,0.27
+72052,X-ray exam neck spine 6/>vws,0.30
+72070,X-ray exam thorac spine 2vws,0.20
+72072,X-ray exam thorac spine 3vws,0.23
+72074,X-ray exam thorac spine4/>vw,0.25
+72080,X-ray exam thoracolmb 2/> vw,0.21
+72081,X-ray exam entire spi 1 vw,0.26
+72082,X-ray exam entire spi 2/3 vw,0.31
+72083,X-ray exam entire spi 4/5 vw,0.35
+72084,X-ray exam entire spi 6/> vw,0.41
+72100,X-ray exam l-s spine 2/3 vws,0.22
+72110,X-ray exam l-2 spine 4/>vws,0.26
+72114,X-ray exam l-s spine bending,0.30
+72120,X-ray bend only l-s spine,0.22
+72125,Ct neck spine w/o dye,1.00
+72126,Ct neck spine w/dye,1.22
+72127,Ct neck spine w/o & w/dye,1.27
+72128,Ct chest spine w/o dye,1.00
+72129,Ct chest spine w/dye,1.22
+72130,Ct chest spine w/o & w/dye,1.27
+72131,Ct lumbar spine w/o dye,1.00
+72132,Ct lumbar spine w/dye,1.22
+72133,Ct lumbar spine w/o & w/dye,1.27
+72141,Mri neck spine w/o dye,1.48
+72142,Mri neck spine w/dye,1.78
+72146,Mri chest spine w/o dye,1.48
+72147,Mri chest spine w/dye,1.78
+72148,Mri lumbar spine w/o dye,1.48
+72149,Mri lumbar spine w/dye,1.78
+72156,Mri neck spine w/o & w/dye,2.29
+72157,Mri chest spine w/o & w/dye,2.29
+72158,Mri lumbar spine w/o & w/dye,2.29
+72159,Mr angio spine w/o&w/dye,1.80
+72170,X-ray exam of pelvis,0.17
+72190,X-ray exam of pelvis,0.25
+72191,Ct angiograph pelv w/o&w/dye,1.81
+72192,Ct pelvis w/o dye,1.09
+72193,Ct pelvis w/dye,1.16
+72194,Ct pelvis w/o & w/dye,1.22
+72195,Mri pelvis w/o dye,1.46
+72196,Mri pelvis w/dye,1.73
+72197,Mri pelvis w/o & w/dye,2.20
+72198,Mr angio pelvis w/o & w/dye,1.80
+72200,X-ray exam si joints,0.17
+72202,X-ray exam si joints 3/> vws,0.23
+72220,X-ray exam sacrum tailbone,0.17
+72240,Myelography neck spine,0.91
+72255,Myelography thoracic spine,0.91
+72265,Myelography l-s spine,0.83
+72270,Myelogphy 2/> spine regions,1.33
+72285,Discography cerv/thor spine,1.16
+72295,X-ray of lower spine disk,0.83
+73000,X-ray exam of collar bone,0.16
+73010,X-ray exam of shoulder blade,0.17
+73020,X-ray exam of shoulder,0.15
+73030,X-ray exam of shoulder,0.18
+73040,Contrast x-ray of shoulder,0.54
+73050,X-ray exam of shoulders,0.18
+73060,X-ray exam of humerus,0.16
+73070,X-ray exam of elbow,0.16
+73080,X-ray exam of elbow,0.17
+73085,Contrast x-ray of elbow,0.54
+73090,X-ray exam of forearm,0.16
+73092,X-ray exam of arm infant,0.16
+73100,X-ray exam of wrist,0.16
+73110,X-ray exam of wrist,0.17
+73115,Contrast x-ray of wrist,0.54
+73120,X-ray exam of hand,0.16
+73130,X-ray exam of hand,0.17
+73140,X-ray exam of finger(s),0.13
+73200,Ct upper extremity w/o dye,1.00
+73201,Ct upper extremity w/dye,1.16
+73202,Ct uppr extremity w/o&w/dye,1.22
+73206,Ct angio upr extrm w/o&w/dye,1.81
+73218,Mri upper extremity w/o dye,1.35
+73219,Mri upper extremity w/dye,1.62
+73220,Mri uppr extremity w/o&w/dye,2.15
+73221,Mri joint upr extrem w/o dye,1.35
+73222,Mri joint upr extrem w/dye,1.62
+73223,Mri joint upr extr w/o&w/dye,2.15
+73225,Mr angio upr extr w/o&w/dye,1.73
+73501,X-ray exam hip uni 1 view,0.18
+73502,X-ray exam hip uni 2-3 views,0.22
+73503,X-ray exam hip uni 4/> views,0.27
+73521,X-ray exam hips bi 2 views,0.22
+73522,X-ray exam hips bi 3-4 views,0.29
+73523,X-ray exam hips bi 5/> views,0.31
+73525,Contrast x-ray of hip,0.54
+73551,X-ray exam of femur 1,0.16
+73552,X-ray exam of femur 2/>,0.18
+73560,X-ray exam of knee 1 or 2,0.16
+73562,X-ray exam of knee 3,0.18
+73564,X-ray exam knee 4 or more,0.22
+73565,X-ray exam of knees,0.16
+73580,Contrast x-ray of knee joint,0.59
+73590,X-ray exam of lower leg,0.16
+73592,X-ray exam of leg infant,0.16
+73600,X-ray exam of ankle,0.16
+73610,X-ray exam of ankle,0.17
+73615,Contrast x-ray of ankle,0.54
+73620,X-ray exam of foot,0.16
+73630,X-ray exam of foot,0.17
+73650,X-ray exam of heel,0.16
+73660,X-ray exam of toe(s),0.13
+73700,Ct lower extremity w/o dye,1.00
+73701,Ct lower extremity w/dye,1.16
+73702,Ct lwr extremity w/o&w/dye,1.22
+73706,Ct angio lwr extr w/o&w/dye,1.90
+73718,Mri lower extremity w/o dye,1.35
+73719,Mri lower extremity w/dye,1.62
+73720,Mri lwr extremity w/o&w/dye,2.15
+73721,Mri jnt of lwr extre w/o dye,1.35
+73722,Mri joint of lwr extr w/dye,1.62
+73723,Mri joint lwr extr w/o&w/dye,2.15
+73725,Mr ang lwr ext w or w/o dye,1.82
+74018,Radex abdomen 1 view,0.18
+74019,Radex abdomen 2 views,0.23
+74021,Radex abdomen 3+ views,0.27
+74022,Radex compl aqt abd series,0.32
+74150,Ct abdomen w/o contrast,1.19
+74160,Ct abdomen w/contrast,1.27
+74170,Ct abd wo cntrst flwd cntrst,1.40
+74174,Cta abd&plvs w/contrast,2.20
+74175,Cta abdomen w/contrast,1.82
+74176,Ct abd & pelvis w/o contrast,1.74
+74177,Ct abd & pelvis w/contrast,1.82
+74178,Ct abd&plv wo cntr flwd cntr,2.01
+74181,Mri abdomen w/o contrast,1.46
+74182,Mri abdomen w/contrast,1.73
+74183,Mri abd w/o cntr flwd cntr,2.20
+74185,Mra abd w or w/o cntrst,1.80
+74190,Peritoneogram rs&i,0.48
+74210,X-ray xm phrnx&/crv esoph c+,0.59
+74220,X-ray xm esophagus 1cntrst,0.60
+74221,X-ray xm esophagus 2cntrst,0.70
+74230,X-ray xm swlng funcj c+,0.53
+74235,Remove esophagus obstruction,1.19
+74240,X-ray xm upr gi trc 1cntrst,0.80
+74246,X-ray xm upr gi trc 2cntrst,0.90
+74248,X-ray sm int f-thru std,0.70
+74250,X-ray xm sm int 1cntrst std,0.81
+74251,X-ray xm sm int 2cntrst std,1.17
+74261,Ct colonography dx,2.40
+74262,Ct colonography dx w/dye,2.50
+74263,Ct colonography screening,2.28
+74270,X-ray xm colon 1cntrst std,1.04
+74280,X-ray xm colon 2cntrst std,1.26
+74283,Ther nma rdctj intus/obstrcj,2.02
+74290,Contrast x-ray gallbladder,0.32
+74300,X-ray bile ducts/pancreas,0.27
+74301,X-rays at surgery add-on,0.21
+74328,X-ray bile duct endoscopy,0.47
+74329,X-ray for pancreas endoscopy,0.47
+74330,X-ray bile/panc endoscopy,0.56
+74340,X-ray guide for gi tube,0.54
+74355,X-ray guide intestinal tube,0.76
+74360,X-ray guide gi dilation,0.54
+74363,X-ray bile duct dilation,0.88
+74400,Urography iv +-kub tomog,0.49
+74410,Urography nfs drip&/bolus,0.49
+74415,Urography nfs drip&/bls w/nf,0.49
+74420,Urography rtrgr +-kub,0.52
+74425,Urography antegrade rs&i,0.51
+74430,Contrast x-ray bladder,0.32
+74440,X-ray male genital tract,0.38
+74445,X-ray exam of penis,1.14
+74450,X-ray urethra/bladder,0.33
+74455,X-ray urethra/bladder,0.33
+74470,X-ray exam of kidney lesion,0.54
+74485,Dilation urtr/urt rs&i,0.83
+74712,Mri fetal sngl/1st gestation,3.00
+74713,Mri fetal ea addl gestation,1.85
+74740,X-ray female genital tract,0.38
+74742,X-ray fallopian tube,0.61
+74775,X-ray exam of perineum,0.62
+75557,Cardiac mri for morph,2.35
+75559,Cardiac mri w/stress img,2.95
+75561,Cardiac mri for morph w/dye,2.60
+75563,Card mri w/stress img & dye,3.00
+75565,Card mri veloc flow mapping,0.25
+75571,Ct hrt w/o dye w/ca test,0.58
+75572,Ct hrt w/3d image,1.75
+75573,Ct hrt c+ strux cgen hrt ds,2.55
+75574,Ct angio hrt w/3d image,2.40
+75580,N-invas est c ffr sw aly cta,0.75
+75600,Contrast exam thoracic aorta,0.49
+75605,Contrast exam thoracic aorta,1.14
+75625,Contrast exam abdominl aorta,1.44
+75630,X-ray aorta leg arteries,2.00
+75635,Ct angio abdominal arteries,2.40
+75705,Artery x-rays spine,2.18
+75710,Artery x-rays arm/leg,1.75
+75716,Artery x-rays arms/legs,1.97
+75726,Artery x-rays abdomen,2.05
+75731,Artery x-rays adrenal gland,1.14
+75733,Artery x-rays adrenals,1.31
+75736,Artery x-rays pelvis,1.14
+75741,Artery x-rays lung,1.31
+75743,Artery x-rays lungs,1.66
+75746,Artery x-rays lung,1.14
+75756,Artery x-rays chest,1.14
+75774,Artery x-ray each vessel,1.01
+75801,Lymph vessel x-ray arm/leg,0.81
+75803,Lymph vessel x-ray arms/legs,1.17
+75805,Lymph vessel x-ray trunk,0.81
+75807,Lymph vessel x-ray trunk,1.17
+75809,Nonvascular shunt x-ray,0.47
+75810,Vein x-ray spleen/liver,1.14
+75820,Vein x-ray arm/leg,1.05
+75822,Vein x-ray arms/legs,1.48
+75825,Vein x-ray trunk,1.14
+75827,Vein x-ray chest,1.14
+75831,Vein x-ray kidney,1.14
+75833,Vein x-ray kidneys,1.49
+75840,Vein x-ray adrenal gland,1.14
+75842,Vein x-ray adrenal glands,1.49
+75860,Vein x-ray neck,1.14
+75870,Vein x-ray skull,1.14
+75872,Vein x-ray skull epidural,1.14
+75880,Vein x-ray eye socket,0.70
+75885,Vein x-ray liver w/hemodynam,1.44
+75887,Vein x-ray liver w/o hemodyn,1.44
+75889,Vein x-ray liver w/hemodynam,1.14
+75891,Vein x-ray liver,1.14
+75893,Venous sampling by catheter,0.54
+75894,X-rays transcath therapy,1.31
+75898,Follow-up angiography,1.65
+75901,Remove cva device obstruct,0.49
+75902,Remove cva lumen obstruct,0.39
+75956,Xray endovasc thor ao repr,7.00
+75957,Xray endovasc thor ao repr,6.00
+75958,Xray place prox ext thor ao,4.00
+75959,Xray place dist ext thor ao,3.50
+75970,Vascular biopsy,0.83
+75984,Xray control catheter change,0.83
+75989,Abscess drainage under x-ray,1.19
+76000,Fluoroscopy <1 hr phys/qhp,0.30
+76010,X-ray nose to rectum,0.18
+76016,Mr safety deter phys/qhp,0.60
+76017,Mr sfty med physics xm cstmz,0.76
+76018,Mr safety implant elec prepj,0.75
+76019,Mr safety implt pos&/immoblj,0.60
+76080,X-ray exam of fistula,0.54
+76098,X-ray exam surgical specimen,0.31
+76100,X-ray exam of body section,0.58
+76120,Cine/video x-rays,0.38
+76125,Cine/video x-rays add-on,0.27
+76376,3d render w/intrp postproces,0.20
+76377,3d render w/intrp postproces,0.79
+76380,Cat scan follow-up study,0.98
+76390,Mr spectroscopy,0.00
+76391,Mr elastography,1.10
+76496,Unlisted fluoroscopic px,0.00
+76497,Unlisted ct procedure,0.00
+76498,Unlisted mr procedure,0.00
+76499,Unlisted dx radiographic px,0.00
+76506,Echo exam of head,0.63
+76510,Oph us dx b-scan&quan a-scan,0.70
+76511,Oph us dx quan a-scan only,0.64
+76512,Oph us dx b-scan,0.56
+76513,Oph us dx ant sgm us uni/bi,0.60
+76514,Echo exam of eye thickness,0.14
+76516,Echo exam of eye,0.40
+76519,Echo exam of eye,0.54
+76529,Echo exam of eye,0.57
+76536,Us exam of head and neck,0.56
+76604,Us exam chest,0.59
+76641,Ultrasound breast complete,0.73
+76642,Ultrasound breast limited,0.68
+76700,Us exam abdom complete,0.81
+76705,Echo exam of abdomen,0.59
+76706,Us abdl aorta screen aaa,0.55
+76770,Us exam abdo back wall comp,0.74
+76775,Us exam abdo back wall lim,0.58
+76776,Us exam k transpl w/doppler,0.76
+76800,Us exam spinal canal,1.13
+76801,Ob us < 14 wks single fetus,0.99
+76802,Ob us < 14 wks addl fetus,0.83
+76805,Ob us >= 14 wks sngl fetus,0.99
+76810,Ob us >= 14 wks addl fetus,0.98
+76811,Ob us detailed sngl fetus,1.90
+76812,Ob us detailed addl fetus,1.78
+76813,Ob us nuchal meas 1 gest,1.18
+76814,Ob us nuchal meas add-on,0.99
+76815,Ob us limited fetus(s),0.65
+76816,Ob us follow-up per fetus,0.85
+76817,Transvaginal us obstetric,0.75
+76818,Fetal biophys profile w/nst,1.05
+76819,Fetal biophys profil w/o nst,0.77
+76820,Umbilical artery echo,0.50
+76821,Middle cerebral artery echo,0.70
+76825,Echo exam of fetal heart,1.67
+76826,Echo exam of fetal heart,0.83
+76827,Echo exam of fetal heart,0.58
+76828,Echo exam of fetal heart,0.56
+76830,Transvaginal us non-ob,0.69
+76831,Echo exam uterus,0.72
+76856,Us exam pelvic complete,0.69
+76857,Us exam pelvic limited,0.50
+76870,Us exam scrotum,0.64
+76872,Us transrectal,0.69
+76873,Echograp trans r pros study,1.55
+76881,Us compl joint r-t w/img,0.90
+76882,Us lmtd jt/fcl evl nvasc xtr,0.69
+76883,Us nrv&acc strux 1xtr compre,1.21
+76885,Us exam infant hips dynamic,0.74
+76886,Us exam infant hips static,0.62
+76932,Echo guide for heart biopsy,0.67
+76936,Echo guide for artery repair,1.99
+76937,Us guide vascular access,0.30
+76940,Us guide tissue ablation,2.00
+76941,Echo guide for transfusion,1.34
+76942,Echo guide for biopsy,0.67
+76945,Echo guide villus sampling,0.67
+76946,Echo guide for amniocentesis,0.38
+76948,Echo guide ova aspiration,0.67
+76965,Echo guidance radiotherapy,1.34
+76975,Gi endoscopic ultrasound,0.81
+76977,Us bone density measure,0.05
+76978,Us trgt dyn mbubb 1st les,1.62
+76979,Us trgt dyn mbubb ea addl,0.85
+76981,Use parenchyma,0.59
+76982,Use 1st target lesion,0.59
+76983,Use ea addl target lesion,0.47
+76984,Dx intraop thoracic aorta us,0.60
+76987,Dx intraop epicar car us chd,1.90
+76988,Dx ntrop epcr us chd img acq,1.20
+76989,Dx intraop epcar us chd i&r,0.70
+76998,Us guide intraop,0.91
+76999,Echo examination procedure,0.00
+77001,Fluoroguide for vein device,0.38
+77002,Needle localization by xray,0.54
+77003,Fluoroguide for spine inject,0.60
+77011,Ct scan for localization,1.21
+77012,Ct scan for needle biopsy,1.50
+77013,Ct guide for tissue ablation,3.99
+77014,Ct scan for therapy guide,0.85
+77021,Mri guidance ndl plmt rs&i,1.50
+77022,Mri gdn parnchyma tiss abltj,4.24
+77046,Mri breast c- unilateral,1.45
+77047,Mri breast c- bilateral,1.60
+77048,Mri breast c-+ w/cad uni,2.10
+77049,Mri breast c-+ w/cad bi,2.30
+77053,X-ray of mammary duct,0.36
+77054,X-ray of mammary ducts,0.45
+77061,Breast tomosynthesis uni,0.00
+77062,Breast tomosynthesis bi,0.00
+77063,Breast tomosynthesis bi,0.60
+77065,Dx mammo incl cad uni,0.81
+77066,Dx mammo incl cad bi,1.00
+77067,Scr mammo bi incl cad,0.76
+77072,Bone age studies,0.19
+77073,Bone length studies,0.26
+77074,Radex osseous survey lmtd,0.44
+77075,Radex osseous survey compl,0.55
+77076,Radex osseous survey infant,0.70
+77077,Joint survey single view,0.33
+77078,Ct bone density axial,0.25
+77080,Dxa bone density axial,0.20
+77081,Dxa bone density appendiculr,0.20
+77084,Mri bone marrow blood supply,1.60
+77085,Dxa bone density axl vrt fx,0.30
+77086,Vrt fracture assmt via dxa,0.17
+77280,Ther rad simulaj field smpl,0.70
+77285,Ther rad simulaj field intrm,1.05
+77290,Ther rad simulaj field cplx,1.56
+77293,Respirator motion mgmt simul,2.00
+77295,3-d radiotherapy plan,4.29
+77299,Unlisted px ther rad tx plng,0.00
+77300,Radiation therapy dose plan,0.62
+77301,Radiotherapy dose plan imrt,7.99
+77306,Telethx isodose plan simple,1.40
+77307,Telethx isodose plan cplx,2.90
+77316,Brachytx isodose plan simple,1.40
+77317,Brachytx isodose intermed,1.83
+77318,Brachytx isodose complex,2.90
+77321,Special teletx port plan,0.95
+77331,Special radiation dosimetry,0.87
+77332,Radiation treatment aid(s),0.45
+77333,Radiation treatment aid(s),0.75
+77334,Radiation treatment aid(s),1.15
+77338,Design mlc device for imrt,4.29
+77399,Unlisted px med radj physics,0.00
+77470,Special radiation treatment,2.03
+77499,Unlisted px ther rad tx mgmt,0.00
+77600,Hyperthermia ext gen supfc,1.31
+77605,Hyperthermia ext gen deep,1.84
+77610,Hyperthermia ntrstl prb 5/<,1.31
+77615,Hyperthermia ntrstl prb>5,1.84
+77620,Hyperthermia gen intrcv prb,1.56
+77750,Infuse radioactive materials,5.00
+77761,Apply intrcav radiat simple,3.85
+77762,Apply intrcav radiat interm,5.76
+77763,Apply intrcav radiat compl,8.66
+77767,Hdr rdncl skn surf brachytx,1.05
+77768,Hdr rdncl skn surf brachytx,1.40
+77770,Hdr rdncl ntrstl/icav brchtx,1.95
+77771,Hdr rdncl ntrstl/icav brchtx,3.80
+77772,Hdr rdncl ntrstl/icav brchtx,5.40
+77778,Apply interstit radiat compl,8.78
+77789,Apply surf ldr radionuclide,1.14
+77799,Unlisted px clin brachytx,0.00
+78012,Thyroid uptake measurement,0.19
+78013,Thyroid imaging w/blood flow,0.37
+78014,Thyroid imaging w/blood flow,0.50
+78015,Thyroid met imaging,0.67
+78016,Thyroid met imaging/studies,0.82
+78018,Thyroid met imaging body,0.86
+78020,Thyroid met uptake,0.60
+78070,Parathyroid planar imaging,0.80
+78071,Parathyrd planar w/wo subtrj,1.20
+78072,Parathyrd planar w/spect&ct,1.60
+78075,Adrenal cortex & medulla img,0.74
+78099,Unlisted endocrine px dx nuc,0.00
+78102,Bone marrow imaging ltd,0.55
+78103,Bone marrow imaging mult,0.75
+78104,Bone marrow imaging body,0.80
+78110,Plasma volume single,0.19
+78111,Plasma volume multiple,0.22
+78120,Red cell mass single,0.23
+78121,Red cell mass multiple,0.32
+78122,Whl bld volume determination,0.45
+78130,Red cell survival study,0.61
+78140,Red cell sequestration,0.61
+78185,Spleen imaging,0.40
+78191,Platelet survival study,0.61
+78195,Lymph system imaging,1.20
+78199,Unlstd hematop ret/endo lymp,0.00
+78201,Liver imaging static only,0.44
+78202,Liver imaging with vasc flow,0.51
+78215,Lvr&spleen img static only,0.49
+78216,Lvr&spleen img w/vasc flow,0.57
+78226,Hepatobiliary system imaging,0.74
+78227,Hepatobil syst image w/drug,0.90
+78230,Salivary gland imaging,0.45
+78231,Salivary glnd img serial img,0.52
+78232,Salivary gland function std,0.47
+78258,Esophageal motility,0.74
+78261,Gastric mucosa imaging,0.69
+78262,Gastroesophageal reflux std,0.68
+78264,Gastric emptying imag study,0.79
+78265,Gastric emptying imag study,0.98
+78266,Gastric emptying imag study,1.08
+78278,Acute gi blood loss imaging,0.99
+78282,Gi protein loss exam,0.38
+78290,Meckels divert exam,0.68
+78291,Leveen/shunt patency exam,0.88
+78299,Unlisted gi px dx nuc med,0.00
+78300,Bone imaging limited area,0.62
+78305,Bone imaging multiple areas,0.83
+78306,Bone imaging whole body,0.86
+78315,Bone imaging 3 phase,1.02
+78350,Bone mineral single photon,0.22
+78399,Unlisted muscskel px dx nuc,0.00
+78414,Non-imaging heart function,0.45
+78428,Cardiac shunt imaging,0.78
+78429,Myocrd img pet 1 std w/ct,1.76
+78430,Myocrd img pet rst/strs w/ct,1.67
+78431,Myocrd img pet rst&strs ct,1.90
+78432,Myocrd img pet 2rtracer,2.07
+78433,Myocrd img pet 2rtracer ct,2.26
+78434,Aqmbf pet rest & rx stress,0.63
+78445,Vascular flow imaging,0.49
+78451,Ht muscle image spect sing,1.38
+78452,Ht muscle image spect mult,1.62
+78453,Ht muscle image planar sing,1.00
+78454,Ht musc image planar mult,1.34
+78456,Acute venous thrombus image,1.00
+78457,Venous thrombosis imaging,0.77
+78458,Ven thrombosis images bilat,0.90
+78459,Myocrd img pet single study,1.61
+78466,Heart infarct image,0.69
+78468,Heart infarct image (ef),0.80
+78469,Heart infarct image (3d),0.92
+78472,Gated heart planar single,0.98
+78473,Gated heart multiple,1.47
+78481,Heart first pass single,0.98
+78483,Heart first pass multiple,1.47
+78491,Myocrd img pet 1std rst/strs,1.56
+78492,Myocrd img pet mlt rst&strs,1.80
+78494,Heart image spect,1.19
+78496,Heart first pass add-on,0.50
+78499,Unlisted cv px dx nuc med,0.00
+78579,Lung ventilation imaging,0.49
+78580,Lung perfusion imaging,0.74
+78582,Lung ventilat&perfus imaging,1.07
+78597,Lung perfusion differential,0.75
+78598,Lung perf&ventilat diferentl,0.85
+78599,Unlisted resp px dx nuc med,0.00
+78600,Brain image < 4 views,0.44
+78601,Brain image w/flow < 4 views,0.51
+78605,Brain image 4+ views,0.53
+78606,Brain image w/flow 4 + views,0.64
+78608,Brain imaging (pet),1.50
+78609,Brain imaging (pet),1.50
+78610,Brain flow imaging only,0.30
+78630,Cerebrospinal fluid scan,0.68
+78635,Csf ventriculography,0.61
+78645,Csf shunt evaluation,0.57
+78650,Csf leakage imaging,0.61
+78660,Nuclear exam of tear flow,0.53
+78699,Unlisted nrvs sys px dx nuc,0.00
+78700,Kidney imaging morphol,0.45
+78701,Kidney imaging with flow,0.49
+78707,K flow/funct image w/o drug,0.96
+78708,K flow/funct image w/drug,1.21
+78709,K flow/funct image multiple,1.41
+78725,Kidney function study,0.38
+78730,Urinary bladder retention,0.15
+78740,Ureteral reflux study,0.57
+78761,Testicular imaging w/flow,0.71
+78799,Unlisted gu px dx nuc med,0.00
+78800,Rp loclzj tum 1 area 1 d img,0.64
+78801,Rp loclzj tum 2+area 1+d img,0.73
+78802,Rp loclzj tum whbdy 1 d img,0.80
+78803,Rp loclzj tum spect 1 area,1.09
+78804,Rp loclzj tum whbdy 2+d img,1.01
+78811,Pet image ltd area,1.54
+78812,Pet image skull-thigh,1.93
+78813,Pet image full body,2.00
+78814,Pet image w/ct lmtd,2.20
+78815,Pet image w/ct skull-thigh,2.44
+78816,Pet image w/ct full body,2.50
+78830,Rp loclzj tum spect w/ct 1,1.49
+78831,Rp loclzj tum spect 2 areas,1.82
+78832,Rp loclzj tum spect w/ct 2,2.12
+78835,Rp quan meas single area,0.47
+78999,Unlisted misc px dx nuc med,0.00
+79005,Nuclear rx oral admin,1.80
+79101,Nuclear rx iv admin,1.96
+79200,Nuclear rx intracav admin,1.99
+79300,Nuclr rx interstit colloid,1.60
+79403,Hematopoietic nuclear tx,2.25
+79440,Nuclear rx intra-articular,1.99
+79445,Nuclear rx intra-arterial,2.40
+79999,Rp therapy unlisted px,0.00
